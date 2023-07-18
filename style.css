@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(235, 141, 157);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* VERSÃO MOBILE */
+main {
+    display: grid;
+    grid-template-columns: (1, 1fr);
+    grid-template-rows: (4, 1fr);
+    grid-template-areas:    "cabecario"
+                            "informacoes"
+                            "projetos"
+                            "contatos";
+
+    margin: 2rem;
+
+    gap: 5rem;
+}
+
+/* Header */
+.cabecario {
+    grid-area: cabecario;
+}
+
+.cabecario :last-child {
+    display: none;
+}
+
+.cabecario :first-child {
+    display: block;
+}
+
+/* 1º Article */
+.informacoes {
+    grid-area: informacoes;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem;
+}
+
+.informacoes :first-child,
+.projetos,
+.contatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+.foto-perfil {
+    height: 35rem;
+    width: 100%;
+
+    border-bottom-right-radius: 10rem;
+    border-top-left-radius: 10rem;
+}
+
+/* 2º Article */
+.projetos {
+    grid-area: projetos;
+    gap: 3rem;
+}
+
+.projetos img {
+    height: 35rem;
+    width: 30rem;
+}
+
+.informacoes-projetos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem;
+}
+
+/* Footer */
+.contatos {
+    grid-area: contatos;
+}
+
+.contatos :first-child {
+    display: flex;
+    gap: 3rem;
+}
+
+.imgs-contatos {
+    height: 4rem;
+    width: 4rem;
+
+    border-radius: 1rem;
+}
+
+/* ----------------------------- TABLETS E CELULARES COM BAIXA RESOLUÇÃO --------------------------*/
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    main {
+        margin: 2rem 5rem 2rem 5rem;
+    }
+    .cabecario {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cabecario :last-child {
+        display: flex;
+        gap: 2rem;
+    }    
+    .foto-perfil {
+        height: 40rem;
+        width: 100%;
+    }
+    .projetos img {
+        height: 40rem;
+        width: 40rem;
+    }
+    .contatos :first-child {
+        gap: 10rem;
+    }
+}
+
+/* -------------------------------------- TABLETS -------------------------------------------------*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+        
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    main {
+        margin: 2rem 5rem 2rem 5rem;
+    }
+    .cabecario {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cabecario :last-child {
+        display: flex;
+        gap: 2rem;
+    }    
+    .foto-perfil {
+        height: 45rem;
+        width: 100%;
+    }
+    .projetos img {
+        height: 40rem;
+        width: 40rem;
+    }
+    .contatos :first-child {
+        gap: 15rem;
+    }
+}
+
+/* ------------------------------------ VERSÃO LAPTOPS ------------------------------------------- */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    h1 {
+        font-size: 3rem;
+        
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.7rem;
+        
+    }
+    main {
+        margin: 2rem 5rem 2rem 5rem;
+    }
+    .cabecario {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cabecario :last-child {
+        display: flex;
+        gap: 2rem;
+    }    
+    .informacoes {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .foto-perfil {
+        height: 40rem;
+        width: 40rem;
+    }
+    .projetos img {
+        height: 40rem;
+        width: 40rem;
+    }
+    .contatos :first-child {
+        gap: 20rem;
+    }
+}
+
+/* ---------------------------------------- VERSÃO DESKTOP -----------------------------------------*/
+@media screen and (min-width: 1281px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 2rem;
+    }
+    main {
+        margin: 2rem 5rem 2rem 5rem;
+
+        gap: 10rem;
+    }
+    .cabecario {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cabecario :last-child {
+        display: flex;
+        gap: 5rem;
+    }    
+    .informacoes {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 10rem;
+    }
+    .foto-perfil {
+        height: 45rem;
+        width: 100%;
+    }
+    .informacoes :first-child {
+        width: 50rem;
+    }
+    .projetos img {
+        height: 45rem;
+        width: 50rem;
+    }
+    .contatos :first-child {
+        gap: 20rem;
+    }
+
+}
+    
