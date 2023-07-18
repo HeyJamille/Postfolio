@@ -98,7 +98,9 @@ main {
 
 .projetos img {
     height: 35rem;
-    width: 30rem;
+    width: 25rem;
+
+    border-radius: 2rem;
 }
 
 .informacoes-projetos {
@@ -128,8 +130,26 @@ main {
     border-radius: 1rem;
 }
 
+/* -------------------------- CELULARES COM BAIXÍSSIMA RESOLUÇÃO ----------------------------------*/
+@media screen and (min-width: 380px ) and (max-width: 479px) {
+    .projetos img {
+        height: 40rem;
+        width: 30rem;
+    }
+}
+
+@media screen and (min-width: 480px ) and (max-width: 555px) {
+    main {
+        margin: 2rem;
+    }
+    .projetos img {
+        height: 40rem;
+        width: 40rem;
+    }
+}
+
 /* ----------------------------- TABLETS E CELULARES COM BAIXA RESOLUÇÃO --------------------------*/
-@media screen and (min-width: 481px) and (max-width: 767px) {
+@media screen and (min-width: 556px) and (max-width: 767px) {
     main {
         margin: 2rem 5rem 2rem 5rem;
     }
@@ -157,7 +177,7 @@ main {
 }
 
 /* -------------------------------------- TABLETS -------------------------------------------------*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 849px) {
     h1 {
         font-size: 3rem;
         
@@ -192,6 +212,27 @@ main {
     }
     .contatos :first-child {
         gap: 15rem;
+    }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+        
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.7rem;
+        
+    }
+    main {
+        margin: 2rem 5rem 2rem 5rem;
+    }
+    .projetos img {
+        height: 40rem;
+        width: 40rem;
     }
 }
 
