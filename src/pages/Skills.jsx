@@ -15,13 +15,14 @@ const Skills = () => {
   const { ref, inView } = useInView();
 
   return (
-    <article 
+    <article
+      id="skills" 
       ref={ref} 
       className={`mb-20 xl:ml-40 xl:mr-40 ${inView ? 'animate-write-right opacity-100' : 'opacity-0'}`}
     >
-      <h2 className="text-button_color text-center mb-5">Habilidades</h2>
+      <h1 className="text-[#cd51ff] text-center mb-5">Habilidades</h1>
       
-      <section className="flex justify-evenly align-center flex-wrap gap-10 md:justify-between">
+      <section className="flex justify-evenly flex-wrap gap-5">
         <SkillIcon icon={<IoLogoHtml5 className="bg-background-color h-20 w-20 p-2 cursor-pointer" />} text="HTML5" />
         <SkillIcon icon={<IoLogoCss3 className="bg-background-color h-20 w-20 p-2 cursor-pointer" />} text="CSS" />
         <SkillIcon icon={<IoLogoJavascript className="bg-background-color h-20 w-20 p-2 cursor-pointer" />} text="JavaScript" />
@@ -39,7 +40,7 @@ const SkillIcon = ({ icon, text }) => {
 
   return (
     <div
-      className="relative hover:scale-110 delay-150 duration-300"
+      className="relative transform hover:scale-105 transition-transform duration-300"
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
