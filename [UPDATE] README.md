@@ -6,4 +6,4 @@
 - TailwindCSS
 
 ### Postfólio disponível em:
-- postfolio-sepia.vercel.app
+
