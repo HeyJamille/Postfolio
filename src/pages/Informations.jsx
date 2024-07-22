@@ -13,7 +13,7 @@ export const Informations = () => {
   return (
     <article ref={ref} className="flex justify-center items-center flex-col gap-10 mt-5 lg:flex-row lg:justify-evenly">
       <section>
-        <img className="h-clamp w-clamp rounded-3xl" src={foto} alt="foto" />
+        <img className="h-clamp rounded-3xl" src={foto} alt="foto" />
       </section>
 
       <section 
